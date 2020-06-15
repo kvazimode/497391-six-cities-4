@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов» [![Build status][travis-image]][travis-url]
 
 * Студент: [Дмитрий Горянин](https://up.htmlacademy.ru/react/4/user/497391).
-* Наставник: `Неизвестно`.
+* Наставник: `undefined`.
 
 ---
 
