@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from './components/main/main.jsx';
+import App from './components/app/app.jsx';
 
-ReactDOM.render(
-    <Main />,
-    document.querySelector(`#root`)
-);
+const init = () => {
+  const setup = {count: 666};
+  ReactDOM.render(
+      <App count={setup.count}/>,
+      document.querySelector(`#root`)
+  );
+};
+
+init();
