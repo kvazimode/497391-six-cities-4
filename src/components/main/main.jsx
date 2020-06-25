@@ -1,8 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Card from '../card/card.jsx';
 
 const Main = (props) => {
-  // eslint-disable-next-line react/prop-types
   const {count, offerTitles} = props;
 
   return <React.Fragment>
@@ -107,6 +107,11 @@ const Main = (props) => {
       </main>
     </div>
   </React.Fragment>;
+};
+
+Main.propTypes = {
+  count: PropTypes.number.isRequired,
+  offerTitles: PropTypes.array.isRequired
 };
 
 export default Main;

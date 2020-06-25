@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Card = (props) => {
   const {title} = props;
-  
+
   return <React.Fragment>
     <article className="cities__place-card place-card">
       <div className="place-card__mark">
@@ -38,7 +39,11 @@ const Card = (props) => {
         <p className="place-card__type">Apartment</p>
       </div>
     </article>
-  </React.Fragment>
+  </React.Fragment>;
+};
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired
 };
 
 export default Card;
