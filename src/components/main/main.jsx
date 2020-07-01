@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Card from '../card/card.jsx';
 
 const Main = (props) => {
-  const {count, offerTitles} = props;
+  const {count, offerTitles, onTitleClick} = props;
 
   return <React.Fragment>
     <div className="page page--gray page--main">
@@ -96,7 +96,7 @@ const Main = (props) => {
               */}
               </form>
               <div className="cities__places-list places__list tabs__content">
-                {offerTitles.map((title, i) => <Card key={i} title={title}/>)}
+                {offerTitles.map((title, i) => <Card key={i} title={title} onTitleClick={onTitleClick}/>)}
               </div>
             </section>
             <div className="cities__right-section">
@@ -111,7 +111,8 @@ const Main = (props) => {
 
 Main.propTypes = {
   count: PropTypes.number.isRequired,
-  offerTitles: PropTypes.array.isRequired
+  offerTitles: PropTypes.array.isRequired,
+  onTitleClick: PropTypes.func
 };
 
 export default Main;
