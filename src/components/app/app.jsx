@@ -5,13 +5,13 @@ import Main from '../main/main.jsx';
 const handleTitleClick = () => {};
 
 const App = (props) => {
-  const {count, offerTitles} = props;
-  return <Main count={count} offerTitles={offerTitles} onTitleClick={handleTitleClick}/>;
+  const {count, offerList} = props;
+  return <Main count={count} offerList={offerList} onTitleClick={handleTitleClick}/>;
 };
 
 App.propTypes = {
   count: PropTypes.number.isRequired,
-  offerTitles: PropTypes.array.isRequired
+  offerList: PropTypes.array.isRequired
 };
 
 export default App;

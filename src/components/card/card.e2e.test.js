@@ -15,7 +15,7 @@ const onTitleClick = jest.fn();
 
 it(`Handles title click`, () => {
   const card = shallow(
-      <Card title={mock.title} onTitleClick={onTitleClick} />
+      <Card offer={mock} onTitleClick={onTitleClick} />
   );
 
   const offerTitle = card.find(`.place-card__name`);

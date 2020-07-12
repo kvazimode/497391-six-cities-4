@@ -311,12 +311,11 @@ exports[`Main renders correctly 1`] = `
                 </div>
                 <h2
                   className="place-card__name"
+                  onClick={[MockFunction]}
                 >
                   <a
                     href="#"
-                  >
-                    uno
-                  </a>
+                  />
                 </h2>
                 <p
                   className="place-card__type"
@@ -412,12 +411,11 @@ exports[`Main renders correctly 1`] = `
                 </div>
                 <h2
                   className="place-card__name"
+                  onClick={[MockFunction]}
                 >
                   <a
                     href="#"
-                  >
-                    dos
-                  </a>
+                  />
                 </h2>
                 <p
                   className="place-card__type"
@@ -513,12 +511,11 @@ exports[`Main renders correctly 1`] = `
                 </div>
                 <h2
                   className="place-card__name"
+                  onClick={[MockFunction]}
                 >
                   <a
                     href="#"
-                  >
-                    tres
-                  </a>
+                  />
                 </h2>
                 <p
                   className="place-card__type"

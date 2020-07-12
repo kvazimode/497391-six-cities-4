@@ -4,12 +4,14 @@ import Main from './main.jsx';
 
 const mock = {
   count: 3,
-  offerTitles: [`uno`, `dos`, `tres`]
+  offerList: [`uno`, `dos`, `tres`]
 };
+
+const onTitleClick = jest.fn();
 
 it(`Main renders correctly`, () => {
   const tree = renderer
-    .create(<Main count={mock.count} offerTitles={mock.offerTitles}/>)
+    .create(<Main count={mock.count} offerList={mock.offerList} onTitleClick={onTitleClick}/>)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

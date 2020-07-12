@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Card = (props) => {
-  const {title, onTitleClick} = props;
+  const {offer, onTitleClick} = props;
 
   return <React.Fragment>
     <article className="cities__place-card place-card">
@@ -34,7 +34,7 @@ const Card = (props) => {
           </div>
         </div>
         <h2 className="place-card__name" onClick={onTitleClick}>
-          <a href="#">{title}</a>
+          <a href="#">{offer.title}</a>
         </h2>
         <p className="place-card__type">Apartment</p>
       </div>
@@ -43,7 +43,7 @@ const Card = (props) => {
 };
 
 Card.propTypes = {
-  title: PropTypes.string.isRequired,
+  offer: PropTypes.object.isRequired,
   onTitleClick: PropTypes.func.isRequired,
 };
 

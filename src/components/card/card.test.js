@@ -10,7 +10,7 @@ const onTitleClick = jest.fn();
 
 it(`card renders correctly`, () => {
   const tree = renderer
-    .create(<Card title={mock.title} onTitleClick={onTitleClick}/>)
+    .create(<Card offer={mock} onTitleClick={onTitleClick}/>)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
