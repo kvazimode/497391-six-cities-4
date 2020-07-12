@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Card from '../card/card.jsx';
+import CardList from '../card-list/card-list.jsx';
 
 const Main = (props) => {
-  const {count, offerTitles, onTitleClick} = props;
+  const {count, offerList, onTitleClick} = props;
 
   return <React.Fragment>
     <div className="page page--gray page--main">
@@ -95,9 +95,7 @@ const Main = (props) => {
               </select>
               */}
               </form>
-              <div className="cities__places-list places__list tabs__content">
-                {offerTitles.map((title, i) => <Card key={i} title={title} onTitleClick={onTitleClick}/>)}
-              </div>
+              <CardList offerList={offerList} onTitleClick={onTitleClick}/>
             </section>
             <div className="cities__right-section">
               <section className="cities__map map" />
@@ -111,7 +109,7 @@ const Main = (props) => {
 
 Main.propTypes = {
   count: PropTypes.number.isRequired,
-  offerTitles: PropTypes.array.isRequired,
+  offerList: PropTypes.array.isRequired,
   onTitleClick: PropTypes.func
 };
 

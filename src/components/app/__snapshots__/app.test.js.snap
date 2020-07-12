@@ -315,9 +315,7 @@ exports[`Main renders correctly 1`] = `
                 >
                   <a
                     href="#"
-                  >
-                    eat
-                  </a>
+                  />
                 </h2>
                 <p
                   className="place-card__type"
@@ -417,9 +415,7 @@ exports[`Main renders correctly 1`] = `
                 >
                   <a
                     href="#"
-                  >
-                    this
-                  </a>
+                  />
                 </h2>
                 <p
                   className="place-card__type"
