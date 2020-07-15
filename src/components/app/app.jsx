@@ -7,13 +7,22 @@ import Main from '../main/main.jsx';
 class App extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      currentId: null
+    };
+    this._handleTitleClick = this._handleTitleClick.bind(this);
   }
 
-  _handleTitleClick() {}
+  _handleTitleClick(id) {
+    this.setState({currentId: id});
+  }
   _renderApp() {
     const {count, offerList} = this.props;
-    return <Main count={count} offerList={offerList} onTitleClick={this._handleTitleClick}/>;
+    if (this.state.currentId) {
+      return <Offer offerId={this.state.currentId}/>;
+    } else {
+      return <Main count={count} offerList={offerList} onTitleClick={this._handleTitleClick}/>;
+    }
   }
 
   render() {
@@ -23,8 +32,8 @@ class App extends React.PureComponent {
           <Route exact path="/">
             {this._renderApp()}
           </Route>
-          <Route excat path="/desc">
-            <Offer />
+          <Route exact path="/desc">
+            <Offer offerId={1}/>
           </Route>
         </Switch>
       </BrowserRouter>

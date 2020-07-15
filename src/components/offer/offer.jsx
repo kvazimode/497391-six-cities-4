@@ -1,6 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import {getOfferById} from '../../utils.js';
 
-const Offer = () => {
+const Offer = (props) => {
+  const {offerId} = props;
+  const offer = getOfferById(offerId);
   return <React.Fragment>
     <div className="page">
       <header className="header">
@@ -56,7 +60,7 @@ const Offer = () => {
               </div>
               <div className="property__name-wrapper">
                 <h1 className="property__name">
-                  Beautiful &amp; luxurious studio at great location
+                  {offer.title}
                 </h1>
                 <button className="property__bookmark-button button" type="button">
                   <svg className="property__bookmark-icon" width={31} height={33}>
@@ -317,6 +321,10 @@ const Offer = () => {
       </main>
     </div>
   </React.Fragment>;
+};
+
+Offer.propTypes = {
+  offerId: PropTypes.number.isRequired
 };
 
 export default Offer;
