@@ -4,7 +4,17 @@ import Main from './main.jsx';
 
 const mock = {
   count: 3,
-  offerList: [`uno`, `dos`, `tres`]
+  offerList: [
+    {
+      titlee: `uno`
+    },
+    {
+      title: `dos`
+    },
+    {
+      title: `tres`
+    }
+  ]
 };
 
 const onTitleClick = jest.fn();

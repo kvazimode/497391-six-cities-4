@@ -4,12 +4,21 @@ import App from './app.jsx';
 
 const mock = {
   count: 2,
-  offerList: [`eat`, `this`]
+  offerList: [
+    {
+      titlee: `eat`
+    },
+    {
+      title: `this`
+    }
+  ]
 };
 
-it(`Main renders correctly`, () => {
+const onTitleClick = () => {};
+
+it(`Main by app renders correctly`, () => {
   const tree = renderer
-    .create(<App count={mock.count} offerList={mock.offerList}/>)
+    .create(<App count={mock.count} offerList={mock.offerList} onTitleClick={onTitleClick}/>)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

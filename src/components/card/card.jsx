@@ -33,7 +33,7 @@ const Card = (props) => {
             <span className="visually-hidden">Rating</span>
           </div>
         </div>
-        <h2 className="place-card__name" onClick={onTitleClick}>
+        <h2 className="place-card__name" onClick={() => (onTitleClick(offer.id))}>
           <a href="#">{offer.title}</a>
         </h2>
         <p className="place-card__type">Apartment</p>
