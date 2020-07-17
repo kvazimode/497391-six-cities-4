@@ -27,12 +27,12 @@ class Map extends React.PureComponent {
     this._mapInstance.setView(city, zoom);
 
     L.tileLayer(
-      `https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`,
-      {
-        attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>`
-      }
+        `https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`,
+        {
+          attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>`
+        }
     ).addTo(this._mapInstance);
-    pinList.map((cords) => this.addPin(cords))
+    pinList.map((cords) => this.addPin(cords));
   }
 
   removeMap() {
@@ -62,12 +62,12 @@ class Map extends React.PureComponent {
   }
 
   render() {
-    return <section className="cities__map map" ref={this._mapRef}></section>
+    return <section className="cities__map map" ref={this._mapRef}></section>;
   }
 }
 
 Map.propTypes = {
   offerList: PropTypes.array.isRequired
-}
+};
 
 export default Map;
