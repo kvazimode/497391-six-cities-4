@@ -21,11 +21,11 @@ const offerList = [
 it(`Map renders correctly`, () => {
   const tree = renderer
     .create(<Map offerList={offerList} />,
-      {
-        createNodeMock: () => {
-          document.createElement(`div`)
-        }
-      })
+        {
+          createNodeMock: () => {
+            document.createElement(`div`);
+          }
+        })
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
