@@ -11,6 +11,39 @@ const offers = [
     city: `Amsterdam`
   },
   {
+    id: 12,
+    title: `Smotri, kak krasivo, vasya!`,
+    imgLink: `img/apartment-01.jpg`,
+    value: 300,
+    type: `Apartment`,
+    isPremium: true,
+    rating: 90,
+    coord: [52.369553943508, 4.85309666406198],
+    city: `Amsterdam`
+  },
+  {
+    id: 13,
+    title: `Norm place. Take it, cho ti?`,
+    imgLink: `img/apartment-01.jpg`,
+    value: 20,
+    type: `Apartment`,
+    isPremium: false,
+    rating: 10,
+    coord: [52.3909553943508, 4.929309666406198],
+    city: `Amsterdam`
+  },
+  {
+    id: 14,
+    title: `Free food!`,
+    imgLink: `img/apartment-01.jpg`,
+    value: 500,
+    type: `Apartment`,
+    isPremium: true,
+    rating: 100,
+    coord: [52.3809553943508, 4.939309666406198],
+    city: `Amsterdam`
+  },
+  {
     id: 2,
     title: `Wood and stone place`,
     imgLink: `img/room.jpg`,
