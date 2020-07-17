@@ -1,32 +1,31 @@
-import React from 'react';
+import React, {PureComponent, createRef} from 'react';
 import PropTypes from 'prop-types';
-import L from 'leaflet';
+import leaflet from 'leaflet';
 
-const city = [52.38333, 4.9];
-
-class Map extends React.PureComponent {
+class Map extends PureComponent {
   constructor(props) {
     super(props);
 
-    this._mapRef = React.createRef();
+    this._mapRef = createRef();
     this._mapInstance = null;
     this._mapSetup = {
+      center: [52.38333, 4.9],
       zoom: 12,
       zoomControl: false,
       marker: true
     };
-    this._pin = L.icon({
+    this._pin = leaflet.icon({
       iconUrl: `img/pin.svg`,
       iconSize: [30, 30]
     });
   }
 
   createMap(pinList) {
-    const {zoom} = this._mapSetup;
-    this._mapInstance = L.map(this._mapRef.current, this._mapSetup);
-    this._mapInstance.setView(city, zoom);
+    const {center, zoom} = this._mapSetup;
+    this._mapInstance = leaflet.map(this._mapRef.current, this._mapSetup);
+    this._mapInstance.setView(center, zoom);
 
-    L.tileLayer(
+    leaflet.tileLayer(
         `https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`,
         {
           attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>`
@@ -42,7 +41,7 @@ class Map extends React.PureComponent {
 
   addPin(pinCords) {
     const pin = this._pin;
-    L.marker(pinCords, {pin}).addTo(this._mapInstance);
+    leaflet.marker(pinCords, {pin}).addTo(this._mapInstance);
   }
 
   getCords() {
@@ -57,12 +56,17 @@ class Map extends React.PureComponent {
     this.createMap(this.getCords());
   }
 
+  componentDidUpdate() {
+    this.removeMap();
+    this.createMap(this.getCords());
+  }
+
   componentWillUnmount() {
     this.removeMap();
   }
 
   render() {
-    return <section className="cities__map map" ref={this._mapRef}></section>;
+    return <section id="map" className="cities__map map" ref={this._mapRef}></section>;
   }
 }
 

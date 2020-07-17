@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Map renders correctly 1`] = `
+<Map
+  offerList={
+    Array [
+      Object {
+        "coord": Array [
+          12.34,
+          12.3,
+        ],
+        "titlee": "uno",
+      },
+      Object {
+        "coord": Array [
+          89.1,
+          76.3,
+        ],
+        "title": "dos",
+      },
+      Object {
+        "coord": Array [
+          40.4,
+          2.2,
+        ],
+        "title": "tres",
+      },
+    ]
+  }
+/>
+`;

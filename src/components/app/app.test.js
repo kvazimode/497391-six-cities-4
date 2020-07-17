@@ -1,15 +1,18 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import App from './app.jsx';
+jest.mock(`../map/map.jsx`, () => `Map`);
 
 const mock = {
   count: 2,
   offerList: [
     {
-      titlee: `eat`
+      titlee: `eat`,
+      coord: [12.30, 21.32]
     },
     {
-      title: `this`
+      title: `this`,
+      coord: [88.88, 43.34]
     }
   ]
 };

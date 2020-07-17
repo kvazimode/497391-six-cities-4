@@ -431,8 +431,25 @@ exports[`Main by app renders correctly 1`] = `
         <div
           className="cities__right-section"
         >
-          <section
-            className="cities__map map"
+          <Map
+            offerList={
+              Array [
+                Object {
+                  "coord": Array [
+                    12.3,
+                    21.32,
+                  ],
+                  "titlee": "eat",
+                },
+                Object {
+                  "coord": Array [
+                    88.88,
+                    43.34,
+                  ],
+                  "title": "this",
+                },
+              ]
+            }
           />
         </div>
       </div>
